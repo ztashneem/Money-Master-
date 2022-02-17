@@ -1,22 +1,21 @@
-// functioned number 1
-//  Expenses and Balance Function
-
+// function number 1
+// Expenses and Balance Function
 function updatevalue() {
     const incomeInput = document.getElementById('income-input');
     const incomeValue = incomeInput.value;
     const product = parseFloat(incomeValue);
-    const foodieInput = document.getElementById('foodie-input');
-    const foodieValue = foodieInput.value;
-    const product1 = parseFloat(foodieValue);
-    foodieInput.value = '';
-    const horentInput = document.getElementById('horent-input');
-    const horentValue = horentInput.value;
-    const product2 = parseFloat(horentValue);
-    horentInput.value = '';
-    const clothsInput = document.getElementById('cloths-input');
-    const clothsValue = clothsInput.value;
-    const product3 = parseFloat(clothsValue);
-    clothsInput.value = '';
+    const foodInput = document.getElementById('food-input');
+    const foodValue = foodInput.value;
+    const product1 = parseFloat(foodValue);
+    foodInput.value = '';
+    const rentInput = document.getElementById('rent-input');
+    const rentValue = rentInput.value;
+    const product2 = parseFloat(rentValue);
+    rentInput.value = '';
+    const clothInput = document.getElementById('cloth-input');
+    const clothValue = clothInput.value;
+    const product3 = parseFloat(clothValue);
+    clothInput.value = '';
     totalExpenses = product1 + product2 + product3;
     const totalInput = document.getElementById('total-expenses');
     const totalInputText = totalInput.innerText;
@@ -26,12 +25,10 @@ function updatevalue() {
     const balanceInputText = balanceInput.innerText;
     balanceInput.innerText = balance;
     return balance;
-
-
+//End  Expenses and Balance Function
 }
-
-// After Saving Remaining Balance
-// functioned number 2
+//Saving Amount - Remaining Balance
+//function number 2
 function saveupdatevalue() {
     const saveInput = document.getElementById('save-input');
     const saveValue = saveInput.value;
@@ -47,5 +44,13 @@ function saveupdatevalue() {
     const remainingBalance = document.getElementById('remaining-balance');
     const remainingBalanceText = remainingBalance.innerText;
     remainingBalance.innerText = balance - savingAmountText;
-
+//End Saving Amount - Remaining Balance
 }
+//  Function Called 01
+document.getElementById('calcaulate-total').addEventListener('click', function () {
+    updatevalue();
+});
+//  Function Called 02
+document.getElementById('save-total').addEventListener('click', function () {
+    saveupdatevalue();
+});
