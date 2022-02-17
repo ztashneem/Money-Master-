@@ -6,69 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Heist</title>
-    <!-- bootstrap stylesheets -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- custom styles -->
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="style.css">
+     <!-- Javascript -->
+     <script src="money.js"></script>
 
 </head>
-
 <body>
     <!-- header start -->
     <header>
-        <h2 class="text-center my-4 text-success">Money Heist</h2>
+        <h2 class="text-center my-4">Money Heist</h2>
     </header>
-    <!-- main start -->
-    <main>
+<main>
+        <!-- Main -->
         <div class="container">
 
             <div class="row">
-
-                <div class="col-6 mt-2 mb-5 ">
-                    <img src="money2.jpg" alt="">
+                
+                <div class="col-sm-12 col-lg-6 mt-2 mb-5 px-5 mb-5 ">
+                    <img class="w-100 h-100" src="1m.jpg" alt="">
                 </div>
-                <div class="col-6 mt-2 mb-5 bg-light ">
+                
+                <!--Expenses Start-->
+                <div class="col-sm-12 col-lg-6 mt-2 mb-5 bg-light">
                     <h4 class=" text-center pt-5 pb-3">Income</h4>
                     <div class="text-center">
                         <span class="p-3">Income:</span>
-                        <input class="bg-secondary text-white p-2 w-50" type="text">
+                        <input id="income-input" class="bg-secondary text-white p-2 w-50" type="text">
                     </div>
                     <h4 class="text-center pt-3 pb-3 ">Expenses</h4>
                     <div class="text-center pb-3">
-                        <span class="p-3">Food:</span>
-                        <input class="bg-secondary text-white p-2 w-50" type="text">
+                        <span class="p-3">Foodie:</span>
+                        <input id="foodie-input" class="bg-secondary text-white p-2 w-50" type="text">
                     </div>
                     <div class="text-center pb-3">
-                        <span class="p-3">Rent:</span>
-                        <input class="bg-secondary text-white p-2 w-50" type="text">
+                        <span class="p-3">Horent:</span>
+                        <input id="horent-input" class="bg-secondary text-white p-2 w-50" type="text">
                     </div>
                     <div class="text-center pb-3">
-                        <span class="p-3">Clothes:</span>
-                        <input class="bg-secondary text-white p-2 w-50" type="text">
+                        <span class="p-3">Cloths:</span>
+                        <input id="cloths-input" class="bg-secondary text-white p-2 w-50" type="text">
                     </div>
 
                     <div class="text-center pb-3">
-                        <button class="btn btn-primary rounded-pill px-5" type="submit">Calculate</button>
+                        <button id="calcaulate-total" class="btn btn-primary rounded-pill px-5"
+                            type="submit">Calculate</button>
                     </div>
-                    <h4 class="text-center pt-3"> Total Expenses: 00</h4>
-                    <h4 class="text-center pt-1 pb-3"> Balance: 00</h4>
+                    <h4 class="text-center pt-3"> Total Expenses: <span id="total-expenses">00</span></h4>
+                    <h4 class="text-center pt-1 pb-3"> Balance: <span id="balance-remain">00</span></h4>
                     <div class="text-center pb-3">
                         <span class="p-3">Save:</span>
-                        <input class="bg-secondary text-white w-25 p-2" type="text"> <span>%</span>
-                        <button class="btn btn-primary rounded-pill px-5 py-3" type="submit">Save </button>
+                        <input id="save-input" class="bg-secondary text-white w-25 p-2" type="text"> <span>%</span>
+                        <button id="save-total" class="btn btn-primary rounded-pill px-5 py-3" type="submit">Save
+                        </button>
                     </div>
-                    <h4 class="text-center pt-3">Saving Amount: 00</h4>
-                    <h4 class="text-center pt-1">Remaining Balance: 00</h4>
+                    <h4 class="text-center pt-3">Saving Amount: <span id="saving-amount">00</span></h4>
+                    <h4 class="text-center pt-1">Remaining Balance: <span id="remaining-balance">00</span></h4>
 
                 </div>
+                <!--Expenses End -->
 
             </div>
 
         </div>
     </main>
-
+   
 </body>
 
 </html>
